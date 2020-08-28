@@ -1,4 +1,5 @@
 .wrapper {
+	overflow: hidden; /* overflow removes extra or hanging sides */
 	padding-left: 18px;
 	padding-right: 18px;
 	max-width: 1200px;
@@ -10,8 +11,7 @@
 	}
 
 	.wrapper {
-		//removes horizontal padding from wrappers inside wrappers (prevents double padding)
 		padding-left: 0;
 		padding-right: 0;
-	}
+	} /* removeds double padding from wrappers nested insider other wrappers */
 }

@@ -7,3 +7,7 @@ img {
 	max-width: 100%; /*100% fills viewport and prevents overflow*/
 	height: auto;
 }
+
+* {
+	box-sizing: border-box; /* include padding and border in total width and height*/
+}

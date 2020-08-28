@@ -7,3 +7,6 @@
 @import 'modules/_wrapper.css';
 @import 'modules/_page-section.css';
 @import 'modules/_headline.css';
+@import 'modules/_row.css';
+
+/* the purpose of this css file is to load all other css files */
