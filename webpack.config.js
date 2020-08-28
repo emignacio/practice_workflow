@@ -14,7 +14,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'app'), //#__dirname resolves to path of file being executed, ./ resolves to current location of executor (run "node Sandbox/node\ experiment/test.js" for example)
 	},
 	devServer: {
-		//holds files in ram. making delivery faster.
+		//holds files in ram. making delivery faster. installed using npm install webpack-dev-server --save-dev
 		before: function (app, server) {
 			//allow live loading of html
 			server._watch('./app/**/*.html');
@@ -30,6 +30,7 @@ module.exports = {
 			{
 				test: /\.css$/i, //test for files with .css extension
 				use: [
+					//see note at closing bracket
 					'style-loader',
 					'css-loader',
 					{
@@ -38,7 +39,7 @@ module.exports = {
 							plugins: postCSSPlugins, //postcss-loader needs plugins to work. options is evaluated right to left
 						},
 					},
-				], //use style-loader(applies) and css-loader(loads) when test result is true
+				], //use style-loader(applies), css-loader(loads), and postcss-loader(scss) when test result is true
 			},
 		],
 	},
