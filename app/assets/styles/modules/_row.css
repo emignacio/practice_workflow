@@ -1,7 +1,23 @@
 .row {
 	@mixin clearFix;
 
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	&__b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
 	@mixin atMedium {
+		&__b-margin-until-medium {
+			margin-bottom: 0;
+		}
+
 		/* restricts 4-8 grid to medium size media */
 		&__medium-4 {
 			float: left;
@@ -20,13 +36,5 @@
 		&__medium-8--smaller {
 			width: 63%;
 		}
-	}
-
-	&--gutters {
-		margin-right: -65px;
-	}
-
-	&--gutters > div {
-		padding-right: 65px;
 	}
 }
