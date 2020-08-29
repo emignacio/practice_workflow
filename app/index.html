@@ -94,21 +94,46 @@
 					Ever since, we&rsquo;ve been working to make travel
 					<strong>better for everyone.</strong>
 				</h3>
-				<div class="wrapper wrapper--medium">
+				<div class="wrapper wrapper--medium wrapper--b-margin">
 					<img
-						src="assets/images/first-trip.jpg"
+						sizes="(min-width: 970px) 976px, 100vw"
+						srcset="
+							assets/images/first-trip-low-res-i.jpg  565w,
+							assets/images/first-trip-i.jpg          976w,
+							assets/images/first-trip-hi-dpi-i.jpg  1952w
+						"
 						alt="Couple walking down a street."
 					/>
 				</div>
 
 				<div class="row row--gutters">
-					<div class="row__medium-4">
-						<img
-							src="assets/images/our-start.jpg"
-							alt="Our founder, Jane Doe"
-						/>
+					<div class="row__medium-4 row__medium-4--larger">
+						<picture>
+							<!-- picture element evaluates sources from top to bottom, whichever media returns true is cached first -->
+							<source
+								media="(min-width: 1020px)"
+								srcset="
+									assets/images/our-start-i.jpg        404w,
+									assets/images/our-start-hi-dpi-i.jpg 808w
+								"
+							/>
+							<source
+								media="(min-width: 800px)"
+								srcset="
+									assets/images/our-start-portrait-i.jpg        328w,
+									assets/images/our-start-portrait-hi-dpi-i.jpg 764w
+								"
+							/>
+
+							<img
+								loading="lazy"
+								srcset="assets/images/our-start-landscape.jpg"
+								alt="Our founder, Jane Doe"
+							/>
+							<!-- img in picture element is default if none of the sources are used -->
+						</picture>
 					</div>
-					<div class="row__medium-8">
+					<div class="row__medium-8 row__medium-8--smaller">
 						<h2 class="headline">
 							Here&rsquo;s how we got started&hellip;
 						</h2>
