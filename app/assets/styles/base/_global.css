@@ -11,3 +11,7 @@ img {
 * {
 	box-sizing: border-box; /* include padding and border in total width and height*/
 }
+
+a {
+	color: $mainOrange;
+}
